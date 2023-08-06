@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Search and Listing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-input {
+            padding: 8px;
+            width: 70%;
+            border: 1px solid #ccc;
+        }
+        .search-button {
+            padding: 8px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 30%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Product Search and Listing</h1>
+
+    <!-- Search Bar and Button -->
+    <form method="POST">
+        <div class="search-container">
+            <input type="text" name = "search" class="search-input" id="search-input" placeholder="Enter product name" value = {{search}}>
+            <button class="search-button" id="search-button" type = "submit">Search</button>
+        </div>
+    </form>
+
+    <!-- Product Listing -->
+    <div class="product-list" id="product-list">
+        {{#each productList}}
+            <div class="product-card">
+                <h3>{{this.title}}</h3>
+                <p>Price: ₹{{this.price}}</p>
+                <p>Rating: {{this.rating}}</p>
+            </div>
+        {{/each}}
+    </div>
+</div>
+
+</body>
+</html>

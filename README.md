@@ -19,11 +19,11 @@ A. Registration and Login:
 ------------------------------------------------
 As a customer I should be able to login/Register in the online shopping application
 Acceptance criteria:
-1.	A logged-in customer can reset their password so they can login, even if they forget their password.
+1.	A logged-in customer can reset their password so they can login, even if they forget their password.  - done
 2.	A logged-in user:
-		a.	Cannot change their username.
+		a.	Cannot change their username. - done
 		b.	Can logout from their account.
-3.	As a customer I should be able to furnish following details at the time of registration
+3.	As a customer I should be able to furnish following details at the time of registration - done
 		a.	First Name
 		b.	Last Name
 		c.	Email
